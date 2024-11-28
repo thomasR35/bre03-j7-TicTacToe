@@ -1,0 +1,61 @@
+:root {
+  --bleugris: #b8cbd0;
+  --bleuvert: #709ca7;
+  --darturquoise: #137c8b;
+  --grisbleu: #7a90a4;
+  --darkbleu: #344d59;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--darkbleu);
+  color: aliceblue;
+}
+h1 {
+  margin-bottom: 5rem;
+  font-size: 5rem;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 8rem);
+  grid-template-rows: repeat(3, 8rem);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.cell {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: var(--bleugris);
+}
+.cell:hover {
+  background-color: var(--grisbleu);
+}
+#resetButton {
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  font-size: 32px;
+  background-color: var(--bleuvert);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resetButton:hover {
+  background-color: var(--darturquoise);
+}
+.winner-message {
+  font-size: 5rem;
+  font-weight: bold;
+}
